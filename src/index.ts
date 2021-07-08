@@ -3,7 +3,10 @@
  *
  * Documentation from LinQ .NET specification (https://msdn.microsoft.com/en-us/library/system.linq.enumerable.aspx)
  *
- * A fork of 'LinQ + TypeScript' originally created by Flavio Corpa (@kutyel)
+ * A fork of 'LinQ + TypeScript' originally created by Flavio Corpa (@kutyel).
+ *
+ * Original linq.ts code Copyright © 2016 Flavio Corpa. All rights reserved.
+ * Updated linq-tsglobal code Copyright © 2021 linq-tsglobal Contributors.
  */
 import { composeComparers, negate, isObj, equal, keyComparer } from './helpers'
 

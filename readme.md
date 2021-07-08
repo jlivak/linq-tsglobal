@@ -34,4 +34,6 @@ TODO:  Add updated test coverage.
 
 ## License
 
-MIT © [Flavio Corpa](http://flaviocorpa.com)
+Modified linq-tsglobal project distributed under MIT © [linq-tsglobal](https://github.com/jlivak/linq-tsglobal) Contributors.
+
+Original linq.ts project distributed under MIT © [Flavio Corpa](http://flaviocorpa.com).
