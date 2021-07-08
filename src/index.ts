@@ -31,7 +31,6 @@ declare global {
         ): number;
         cast<U>(): Array<U>;
         clear(): void;
-        concat(array: Array<T>): Array<T>;
         contains(element: T): boolean;
         count(): number;
         count(predicate?: PredicateType<T>): number;
@@ -178,13 +177,6 @@ declare global {
    */
   Array.prototype.clear = function<T>(this: Array<T>): void {
     this.length = 0;
-  };
-
-  /**
-   * Concatenates two sequences.
-   */
-  Array.prototype.concat = function<T>(this: Array<T>, array: Array<T>): Array<T> {
-    return new Array<T>(...this, ...array);
   };
 
   /**
