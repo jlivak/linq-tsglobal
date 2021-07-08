@@ -1,5 +1,7 @@
 # Linq for TypeScript, Exported as a Global Modifying Module
 
+[![Version](https://img.shields.io/npm/v/linq-tsglobal.svg)](https://npmjs.com/package/linq-tsglobal)
+
 This package adds many commonly used .NET Linq methods directly to javascript's Array prototype on import.  It does so by making use of Typescript's global modifying module pattern.
 
 It is a fork of the linq.ts project, but moves all of the methods out of a separate List type and into the Array prototype.
