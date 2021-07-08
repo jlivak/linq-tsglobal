@@ -1,6 +1,6 @@
 {
   "name": "linq-tsglobal",
-  "version": "1.14.0",
+  "version": "1.0.0",
   "description": "LinQ + TypeScript, now added directly to the Array prototype.",
   "es2015": "index.ts",
   "source": "index.ts",
