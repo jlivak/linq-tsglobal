@@ -1,32 +1,38 @@
-# LinQ for TypeScript, Exported as a Global Modifying Module (linq-tsglobal)
+# Linq for TypeScript, Exported as a Global Modifying Module
 
+This package adds many commonly used .NET Linq methods directly to javascript's Array prototype on import.  It does so by making use of Typescript's global modifying module pattern.
+
+It is a fork of the linq.ts project, but moves all of the methods out of a separate List type and into the Array prototype.
 
 ## Install
 
 ```sh
-$ npm i linq-tsglobal
+$ npm install linq-tsglobal
 ```
 
 ## Usage
 
+Import `linq-tsglobal` at the top of your entry point file.
+~~~typescript
+import 'linq-tsglobal';
+~~~
+
+Call linq methods directly on array objects.
 ```typescript
-import { List } from 'linqts';
+let demoArray: string[] = ["Cat", "Dog", "Snake", "Seven"];
 
-const arr = new List<number>([1, 2, 3, 4, 5])
+demoArray.remove("Seven");
+demoArray.removeAt(1);
+demoArray.insert(1, "Monkey");
+// > ["Cat", "Monkey", "Snake"]
+
+let numbersArray: number[] = [1, 2, 3, 4, 5];
+
+let arr = numbersArray
   .Where(x => x > 3)
-  .Select(y => y * 2)
-  .ToArray(); // > [8, 10]
-
-const query = people.Join(pets,
-  person => person,
-  pet => pet.Owner,
-  (person, pet) =>
-    ({ OwnerName: person.Name, Pet: pet.Name }));
+  .Select(y => y * 2);
+// > [8, 10]
 ```
-
-## Documentation
-
-If you do not know LinQ or just want to remember what is all about, have a look at the [docs](http://kutyel.github.io/linq.ts/docs/classes/list/index.html).
 
 ## Tests
 
